@@ -37,6 +37,7 @@ public:
     ~HX711();
     int getValue(void);
     int averageValue(uint8_t times);
+    int readScale(void);
     void setOffset(int offset);
     void setScale(float scale);
     float getGram();
