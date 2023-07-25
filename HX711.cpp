@@ -97,7 +97,13 @@ int HX711::getValue() //Obtenir la valeur brut du controller
  
     return buffer;
 }
- 
+
+int HX711::readScale(void)
+{
+    int val = getValue();
+    return val - _offset;
+}
+
 void HX711::setOffset(int offset)
 {
     _offset = offset;
